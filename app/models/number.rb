@@ -1,18 +1,10 @@
 class Number < ActiveRecord::Base
 	validates :value, presence: true
 
-	def is_fizzbuzz(number)
-		if number.value == 0
-			return nil
-		elsif number.value % 15 == 0
-			number.fizzbuzz = "FizzBuzz"
-			return "FizzBuzz"
-		elsif number.value % 3 == 0
-			number.fizzbuzz = "Fizz"
-			return "Fizz"
-		elsif number.value % 5 == 0
-			number.fizzbuzz = "Buzz"
-			return "Buzz"
-		end
+	def is_fizzbuzz
+		return nil if self.value == 0
+		return "FizzBuzz" if self.value % 15 == 0
+		return "Fizz" if self.value % 3 == 0
+		return "Buzz" if self.value % 5 == 0
 	end
 end

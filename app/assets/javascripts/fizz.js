@@ -16,8 +16,8 @@ $(document).ready(function(){
         $('.output').append("<p>" + index + ": " + output + "</p>")
         index = index + 1
       },
-      failure:function(result){
-        $('.output').append("<p> 422 Unprocessable Entity </p>")
+      error:function(result){
+        $('.output').html("<b> 422 Unprocessable Entity </b>")
       }
     });
   }

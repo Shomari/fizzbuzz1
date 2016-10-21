@@ -14,19 +14,19 @@ RSpec.describe Number, :type => :model do
 	describe 'is_fizzbuzz' do
 		it 'has no fizzbuzz value if number is not divisable by 3, 5, or 15' do
 			num.value = 4
-			expect(num.is_fizzbuzz(num)).to be_nil
+			expect(num.is_fizzbuzz).to be_nil
 		end
 
 		it 'sets fizzbuzz value to fizzbuzz if number is divisable by 15' do
-			expect(num1.is_fizzbuzz(num1)).to eq "FizzBuzz"
+			expect(num1.is_fizzbuzz).to eq "FizzBuzz"
 		end
 
 		it 'sets fizzbuzz value to Fizz if number is divisable by 3' do
-			expect(num.is_fizzbuzz(num)).to eq "Fizz"
+			expect(num.is_fizzbuzz).to eq "Fizz"
 		end
 
 		it 'sets fizzbuzz value to Buzz if number is divisable by 5' do
-			expect(num2.is_fizzbuzz(num2)).to eq "Buzz"
+			expect(num2.is_fizzbuzz).to eq "Buzz"
 		end
 
 	end
